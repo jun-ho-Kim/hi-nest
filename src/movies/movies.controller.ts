@@ -3,6 +3,7 @@ import { getOuterBindingIdentifiers } from '../../node_modules/@babel/types';
 import { Movie } from './entities/movie.entity';
 import { MoviesService } from './movies.service';
 import { CreateMovieDto } from './dto/create-movie.dto';
+import { UpdateMovieDto } from './dto/update-movie.dto';
 
 @Controller('movies')
 export class MoviesController {
@@ -33,7 +34,7 @@ export class MoviesController {
     }
 
     @Patch('/:id')
-    Patch(@Param('id') movieId: number, @Body() updateData) {
+    Patch(@Param('id') movieId: number, @Body() updateData: UpdateMovieDto) {
         return this.moviesService.update(movieId, updateData);
     }
     // '/search'가 아닌 'search' 로 사용가능 
