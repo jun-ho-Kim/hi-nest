@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Delete, Patch, Body, Query } from '@nestjs/common';
+import { Controller, Get, Param, Post, Delete, Patch, Body, Query, Req, Res } from '@nestjs/common';
 import { getOuterBindingIdentifiers } from '../../node_modules/@babel/types';
 import { Movie } from './entities/movie.entity';
 import { MoviesService } from './movies.service';
