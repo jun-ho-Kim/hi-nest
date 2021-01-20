@@ -37,7 +37,4 @@ export class MoviesController {
     Patch(@Param('id') movieId: number, @Body() updateData: UpdateMovieDto) {
         return this.moviesService.update(movieId, updateData);
     }
-    // '/search'가 아닌 'search' 로 사용가능 
-    
-
 }
